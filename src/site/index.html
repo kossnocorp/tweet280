@@ -92,10 +92,12 @@
         <script>
           window.trackDownload = function () {
             window.ga && window.ga('send', 'event', 'landing', 'download')
+            window.fbq && window.fbq('track', 'Lead')
           }
 
           window.trackChirrAppClick = function () {
             window.ga && window.ga('send', 'event', 'landing', 'Chirr App click')
+            window.fbq && window.fbq('track', 'Lead')
           }
         </script>
 

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+
+  "name": "Tweet 280 Today!",
+  "description": "An extension that allows to publish 280-length tweets today",
+  "version": "1.0.1",
+
+  "permissions": [
+    "https://twitter.com/"
+  ],
+
+  "icons": {
+    "1024": "icon1024.png"
+  },
+
+  "browser_action": {
+    "default_icon": "iconPanel.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["index.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
